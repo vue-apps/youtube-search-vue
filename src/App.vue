@@ -1,11 +1,13 @@
 <template>
   <div>
     <SearchBar @searchQuery="onSearchQuery" />
+    <VideoList />
   </div>
 </template>
 
 <script>
 import SearchBar from './components/searchBar';
+import VideoList from './components/videoList';
 import axios from 'axios';
 const API_KEY = 'AIzaSyBQiEJ1NRjPoMKeTtkzCQetScCg5KUucJ4';
 
@@ -13,6 +15,7 @@ export default {
   name: 'App',
   components: {
     SearchBar,
+    VideoList,
   },
   methods: {
     onSearchQuery(queryString) {
