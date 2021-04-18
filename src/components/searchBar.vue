@@ -1,12 +1,13 @@
 <template>
   <div>
-    <input @input="onInput" />
+    <label for="search">Enter only a number: </label>
+    <input @input="onInput" id="search" />
   </div>
 </template>
 
 <script>
 export default {
-  name: 'searchBar',
+  name: 'SearchBar',
   methods: {
     onInput(e) {
       e.target.value = e.target.value.replace(/\D/, '');
