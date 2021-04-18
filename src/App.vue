@@ -9,11 +9,11 @@
 import SearchBar from './components/searchBar';
 import VideoList from './components/videoList';
 import axios from 'axios';
-const API_KEY = 'AIzaSyAdObW29k_2F2ic1BZMg7_OgP011wdxAdM';
+// const API_KEY = 'AIzaSyAdObW29k_2F2ic1BZMg7_OgP011wdxAdM';
 
 export default {
   data() {
-    return { videos: [] };
+    return { videos: ['movie1', 'movie2', 'movie3', 'movie4', 'movie5'] };
   },
   name: 'App',
   components: {
@@ -23,16 +23,12 @@ export default {
   methods: {
     onSearchQuery(queryString) {
       axios
-        .get('https://www.googleapis.com/youtube/v3/search', {
-          params: {
-            key: API_KEY,
-            type: 'video',
-            part: 'snippet',
-            q: queryString,
-          },
-        })
+        .get(
+          `https://jsonplaceholder.typicode.com/albums/${queryString}/photos`
+        )
         .then((res) => {
-          this.videos = res.data.items;
+          console.log(res);
+          this.videos = res.data;
         });
     },
   },
