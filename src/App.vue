@@ -37,7 +37,6 @@ export default {
           },
         })
         .then((res) => {
-          // console.log(res);
           this.videos = res.data.items;
         });
     },
