@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <SearchBar @searchQuery="onSearchQuery" />
-    <VideoList :videos="videos"></VideoList>
+    <VideoList @videoSelect="showVideo" :videos="videos"></VideoList>
   </div>
 </template>
 
@@ -35,6 +35,9 @@ export default {
           console.log(res);
           this.videos = res.data.items;
         });
+    },
+    showVideo(video) {
+      console.log(video);
     },
   },
 };
