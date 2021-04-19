@@ -1,6 +1,6 @@
 <template>
   <li>
-    {{ video.title }}
+    {{ video.snippet.title }}
   </li>
 </template>
 
