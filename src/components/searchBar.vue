@@ -1,6 +1,5 @@
 <template>
   <div>
-    <label for="search" class="d-block">Enter only a number: </label>
     <input @input="onInput" id="search" />
   </div>
 </template>
@@ -24,5 +23,6 @@ input {
 
 div {
   text-align: center;
+  margin: 20px;
 }
 </style>
